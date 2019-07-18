@@ -8,6 +8,6 @@ class Thought:
 	def __repr__(self):
 		return repr((self.name, self.id, self.executed))
 
-	item1 = Thought("main", "0", False)
 
-	print(item1)
+item1 = Thought("main", "0", False)
+print(item1)
