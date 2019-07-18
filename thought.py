@@ -13,5 +13,5 @@ class Thought:
 item1 = Thought("main", time.time(), False)
 
 while True:
-	print(item1)
+	print(item1.thoughtId)
 	time.sleep(1)
