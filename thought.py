@@ -4,13 +4,13 @@ import time
 class Thought:
 	def __init__(self, name, thoughtId, executed):
 		self.name = str(name)
-		self.thoughtId = int(thoughtId)
+		self.thoughtId = float(thoughtId)
 		self.executed = bool(executed)
 	def __repr__(self):
 		return repr((self.name))
 
 
-item1 = Thought("main", 0, False)
+item1 = Thought("main", time.time(), False)
 
 while True:
 	print(item1)
