@@ -10,7 +10,7 @@ class Thought:
 		return repr((self.name))
 
 
-item1 = Thought("main", time.time(), False)
+item1 = Thought("main", time.ctime(time.time()), False)
 
 while True:
 	print(item1.thoughtId)
