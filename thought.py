@@ -10,7 +10,7 @@ class Thought:
 	def __repr__(self):
 		return repr((self.name))
 	def pop(self):
-		if(self.poppable = True):
+		if(self.poppable == True):
 			return Thought(self.name, self.thoughtId, True, self.poppable)
 		else:
 			print("not able to remove thought")
