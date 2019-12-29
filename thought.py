@@ -19,10 +19,12 @@ class Thought:
 
 thoughtqueue = [Thought("main", time.time(), False, False)]
 
-while(len(thoughtqueue) != 0):
-	thoughtqueue[len(thoughtqueue)-1].pop()
-	rnd = int(random() * 100)
-	if(rnd <= 25):
-		thoughtqueue.append(Thought("Thought " + str(rnd), time.time(), False, True))
-	time.sleep(1)
+print(thoughtqueue)
+
+# while(len(thoughtqueue) != 0):
+# 	thoughtqueue[len(thoughtqueue)-1].pop()
+# 	rnd = int(random() * 100)
+# 	if(rnd <= 25):
+# 		thoughtqueue.append(Thought("Thought " + str(rnd), time.time(), False, True))
+# 	time.sleep(1)
 
