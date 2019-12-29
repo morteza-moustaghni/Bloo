@@ -18,7 +18,7 @@ class Thought:
 
 thoughtqueue = [Thought("main", time.time(), False, False)]
 
-while(thoughtqueue.len() != 0):
+while(len(thoughtqueue) != 0):
 	thoughtqueue[thoughtqueue.len()].pop()
 	rnd = int(random.random() * 100)
 	if(rnd <= 25):
