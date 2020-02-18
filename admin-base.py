@@ -1,7 +1,7 @@
 from flask_admin.contrib.sqla import ModelView
-from flask import Flask
+from flask import *
 from flask_admin import Admin
-from flask_restful import Resource, Api
+from flask_restful import *
 
 app = Flask(__name__)
 api = Api(app)
