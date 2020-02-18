@@ -1,5 +1,5 @@
 from flask import Flask
-from flask_superadmin import Admin
+from flask.ext.superadmin import Admin
 
 app = Flask(__name__)
 
