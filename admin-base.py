@@ -15,7 +15,8 @@ def home():
 
 class Draw(Resource):
 	def get(self):
-		return render_template("draw.html")
+		headers = {'Content-Type': 'text/html'}
+		return make_response(render_template("draw.html"), 200, headers)
 
 api.add_resource(Draw, '/draw')
 
