@@ -5,5 +5,5 @@ app = Flask(__name__)
 
 admin = Admin(app, name='digicom', template_mode='bootstrap3')
 	
-
-app.run()
+if __name__ == '__main__':
+	app.run(host='0.0.0.0')
