@@ -1,9 +1,9 @@
 from flask import Flask
-from flask_superadmin import Admin
+from flask_admin import Admin
 
 app = Flask(__name__)
 
-admin = Admin(app)
-
+admin = Admin(app, name='digicom', template_mode='bootstrap3')
+	
 
 app.run()
