@@ -16,7 +16,7 @@ def home():
 class medi(Resource):
 	def get(self):
 		headers = {'Content-Type': 'text/html'}
-		return make_response(render_template("medi/index.html"), 200, headers)
+		return make_response(render_template("index.html"), 200, headers)
 
 api.add_resource(medi, '/medi')
 
