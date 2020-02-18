@@ -13,12 +13,12 @@ admin = Admin(app, name='digicom', template_mode='bootstrap3')
 def home():
 	return "HOME"	
 
-class Draw(Resource):
+class medi(Resource):
 	def get(self):
 		headers = {'Content-Type': 'text/html'}
-		return make_response(render_template("draw.html"), 200, headers)
+		return make_response(render_template("medi/index.html"), 200, headers)
 
-api.add_resource(Draw, '/draw')
+api.add_resource(medi, '/medi')
 
 if __name__ == '__main__':
 	app.run(host='0.0.0.0')
