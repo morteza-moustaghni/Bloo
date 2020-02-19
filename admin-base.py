@@ -3,7 +3,7 @@ from flask import *
 from flask_admin import Admin
 from flask_restful import *
 
-app = Flask(__name__)
+app = Flask(__name__, static_url_path='')
 api = Api(app)
 
 
@@ -15,8 +15,7 @@ def home():
 
 class medi(Resource):
 	def get(self):
-		headers = {'Content-Type': 'text/html'}
-		return make_response(render_template("index.html"), 200, headers)
+		return app.send_static_file('index.html')
 
 api.add_resource(medi, '/medi')
 
