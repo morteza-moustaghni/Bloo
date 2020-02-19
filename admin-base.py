@@ -3,7 +3,7 @@ from flask import *
 from flask_admin import Admin
 from flask_restful import *
 
-app = Flask(__name__, static_url_path='')
+app = Flask(__name__, template_folder="medi", static_folder="medi", static_url_path="")
 api = Api(app)
 
 
