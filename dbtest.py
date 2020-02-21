@@ -1,3 +1,4 @@
+import sqlalchemy
 
 SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://PythonMysql:test123@localhost/python_test_1'
 
