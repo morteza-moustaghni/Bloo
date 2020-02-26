@@ -21,4 +21,3 @@ class School(Base):
 
 Base.metadata.create_all(engine)
 
-#SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://PythonMySQL:test123@localhost/python_test_1'
