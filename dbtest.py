@@ -1,15 +1,13 @@
-from urllib.request import Request, urlopen
+from urllib.request import urlopen
 from bs4 import BeautifulSoup as soup
 
-req = Request('https://www.willys.se/butiker/alla', headers={'User-Agent': 'Mozilla/5.0'})
+my_url = 'https://www.ica.se'
+uClient = urlopen(my_url)
+page_html = uClient.read()
+uClient.close()
 
-page_html = urlopen(req).read()
-
-
-
-
-
-
+p_s = soup(page_html, "html.parser")
+p_s
 
 
 
@@ -25,26 +23,34 @@ page_html = urlopen(req).read()
 
 
 
-from sqlalchemy import create_engine, ForeignKey
-from sqlalchemy import Column, Date, Integer, String
-from sqlalchemy.ext.declarative import declarative_base
-
-engine = create_engine('sqlite:///school.db', echo=True)
-Base = declarative_base()
 
 
-class School(Base):
-
-    __tablename__ = "woot"
-
-    id = Column(Integer, primary_key=True)
-    name = Column(String)  
 
 
-    def __init__(self, name):
-
-        self.name = name    
 
 
-Base.metadata.create_all(engine)
+
+
+# from sqlalchemy import create_engine, ForeignKey
+# from sqlalchemy import Column, Date, Integer, String
+# from sqlalchemy.ext.declarative import declarative_base
+
+# engine = create_engine('sqlite:///school.db', echo=True)
+# Base = declarative_base()
+
+
+# class School(Base):
+
+#     __tablename__ = "woot"
+
+#     id = Column(Integer, primary_key=True)
+#     name = Column(String)  
+
+
+#     def __init__(self, name):
+
+#         self.name = name    
+
+
+# Base.metadata.create_all(engine)
 
